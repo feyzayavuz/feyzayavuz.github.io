@@ -4,7 +4,7 @@
  <title>Feyza Yavuz</title>
  <link href="http://feyzayavuz.github.io/atom.xml" rel="self"/>
  <link href="http://feyzayavuz.github.io/"/>
- <updated>2016-03-31T04:08:46+03:00</updated>
+ <updated>2016-03-31T04:20:40+03:00</updated>
  <id>http://feyzayavuz.github.io</id>
  <author>
    <name>Feyza</name>
@@ -36,9 +36,11 @@ verilebilen bir ofis yazılımıdır.
 
 &lt;h3 id=&quot;adm-kaynak-kodun-indirilmesi&quot;&gt;3. adım: Kaynak kodun indirilmesi&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bugs.documentfoundation.org/&quot;&gt;Belgede&lt;/a&gt; bahsedildiği gibi kaynok kod indirilmeli.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bugs.documentfoundation.org/&quot;&gt;Belgede&lt;/a&gt; bahsedildiği gibi kaynak kod indirilmeli.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//anongit.freedesktop.org/libreoffice/core libreoffice&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;adm-kaynak-kodun-derlenmesi&quot;&gt;4. adım: Kaynak kodun derlenmesi&lt;/h3&gt;
 
@@ -57,7 +59,7 @@ verilebilen bir ofis yazılımıdır.
 
 &lt;p&gt;&lt;i&gt;LibreOffice deposunu indiriyoruz:&lt;/i&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//anongit.freedesktop.org/libreoffice/core libreoffice&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+ 	$ git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
 
 &lt;p&gt;&lt;i&gt;Dizinde betik dosyasının hatasız çalıştığını görmek için komutu çalıştırıyoruz:&lt;/i&gt;&lt;/p&gt;
 
@@ -119,7 +121,9 @@ verilebilen bir ofis yazılımıdır.
 &lt;i&gt;(Değişiklik yaptığınız dizinin bir üst dizinindeyken “ $ git add . “ komutunu kullabilirsiniz.)&lt;/i&gt;
 &lt;i&gt;$ git commit dediğimizde,commit mesajının başına tdf#&lt;bug_id&gt; diyerek bug numarası ile ilişkilendirmelisiniz. Tam yapı:&lt;/bug_id&gt;&lt;/i&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;tdf&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bug_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;commit_mesaji&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tdf#&amp;lt;bug_id&amp;gt;  &amp;lt;commit_mesaji&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;i&gt;şeklinde olmalıdır.&lt;/i&gt;&lt;/p&gt;
 

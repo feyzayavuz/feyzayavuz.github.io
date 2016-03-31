@@ -19,11 +19,11 @@ Libreoffice hata takip sistemi olarak bugzilla kullanılmaktadır. Bugzilla, lib
 
 ### 3. adım: Kaynak kodun indirilmesi
 
-[Belgede](https://bugs.documentfoundation.org/) bahsedildiği gibi kaynok kod indirilmeli.
+[Belgede](https://bugs.documentfoundation.org/) bahsedildiği gibi kaynak kod indirilmeli.
 
-{% highlight js %}
-$ git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
-{% endhighlight %}
+
+	$ git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
+
 
 ### 4. adım: Kaynak kodun derlenmesi
 
@@ -43,9 +43,9 @@ $ git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
 {% endhighlight %}
 
 <i>LibreOffice deposunu indiriyoruz:</i>
-{% highlight js %}
- $ git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
-{% endhighlight %}
+	
+ 	$ git clone git://anongit.freedesktop.org/libreoffice/core libreoffice
+	
 
 <i>Dizinde betik dosyasının hatasız çalıştığını görmek için komutu çalıştırıyoruz:</i>
 {% highlight js %}
@@ -115,9 +115,9 @@ komutları ile yamanızı gerrite gönderebilirsiniz.
 <i><b>Notlar:</b></i>
 <i>(Değişiklik yaptığınız dizinin bir üst dizinindeyken " $ git add . " komutunu kullabilirsiniz.)</i>
 <i>$ git commit dediğimizde,commit mesajının başına tdf#<bug_id> diyerek bug numarası ile ilişkilendirmelisiniz. Tam yapı:
-{% highlight js %}
-tdf#<bug_id>  <commit_mesaji>
-{% endhighlight %}
+
+	tdf#<bug_id>  <commit_mesaji>
+
 <i>şeklinde olmalıdır.</i>
 
 <b>Yeni versiyon commit göndermek için gerekli adımlar da [burada](https://wiki.documentfoundation.org/Development/gerrit/SubmitPatch) anlatılmış. Kısaca:</b>
