@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Feyza Yavuz</title>
+ <link href="http://feyzayavuz.github.io/atom.xml" rel="self"/>
+ <link href="http://feyzayavuz.github.io/"/>
+ <updated>2016-03-31T03:34:50+03:00</updated>
+ <id>http://feyzayavuz.github.io</id>
+ <author>
+   <name>Feyza</name>
+   <email>feyzaayavuz@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>LibreOffice'e Katkı Vermek</title>
+   <link href="http://feyzayavuz.github.io/2015/11/01/LibreOffice'e-Katk%C4%B1-Vermek/"/>
+   <updated>2015-11-01T00:00:00+03:00</updated>
+   <id>http://feyzayavuz.github.io/2015/11/01/LibreOffice'e-Katkı-Vermek</id>
+   <content type="html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LibreOffice, özgür yazılım destekçisi insanlar tarafından katkı
+verilebilen bir ofis yazılımıdır. 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;LibreOffice’e katkı vermeyi düşünüyorsanız, katkı vermeden önce gerçekleştirilmesi gereken aşamaları ve yama göndermek için gerekli adımları anlatacağım.&lt;/p&gt;
+
+&lt;h3 id=&quot;adm-gelitirici-listesine-ye-olmak&quot;&gt;1. adım: Geliştirici listesine üye olmak&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lists.freedesktop.org/mailman/listinfo/libreoffice&quot;&gt;Geliştirici listesine&lt;/a&gt; bu adresten üye olunmalı.&lt;/p&gt;
+
+&lt;h3 id=&quot;adm-hata-takip-sistemine-ye-olmak&quot;&gt;2. adım: Hata takip sistemine üye olmak&lt;/h3&gt;
+
+&lt;p&gt;Libreoffice hata takip sistemi olarak bugzilla kullanılmaktadır. Bugzilla, libreoffice kullanımı sırasında ortaya çıkan hataların kullanıcılar tarafından geliştiricilere bildirilmesini sağlayan web tabanlı bir arayüzdür.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bugs.documentfoundation.org/&quot;&gt;Hata takip sistemi üyeliği&lt;/a&gt; buradan yapılmalı.&lt;/p&gt;
+
+&lt;h3 id=&quot;adm-kaynak-kodun-indirilmesi&quot;&gt;3. adım: Kaynak kodun indirilmesi&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bugs.documentfoundation.org/&quot;&gt;Belgede&lt;/a&gt; bahsedildiği gibi kaynok kod indirilmeli.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//anongit.freedesktop.org/libreoffice/core libreoffice&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;adm-kaynak-kodun-derlenmesi&quot;&gt;4. adım: Kaynak kodun derlenmesi&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wiki.documentfoundation.org/Development/BuildingOnLinux&quot;&gt;Kaynak kodu derlemek&lt;/a&gt; için yardımcı olacaktır. (&lt;a href=&quot;https://www.youtube.com/watch?v=2gIqOOajdYQ&amp;amp;hd=1&quot;&gt;Video&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Kısaca adımlar&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;Önce depoyu derliyoruz: &lt;/i&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;upgrade&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;i&gt;Bağımlılıkları kuruyoruz:&lt;/i&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dep&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libreoffice&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;i&gt;LibreOffice deposunu indiriyoruz:&lt;/i&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//anongit.freedesktop.org/libreoffice/core libreoffice&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;i&gt;Dizinde betik dosyasının hatasız çalıştığını görmek için komutu çalıştırıyoruz:&lt;/i&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libreoffice&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;autogen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;i&gt;Derliyoruz:&lt;/i&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;make&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jN&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;i&gt;[Not1: N: çekirdek sayısı], [Not2: Derleme işlemi uzun sürüyor]&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;Derleme tamamlanınca Libreoffice5’in çalıştığından emin olmak için bu komutu kullanabilirsiniz:&lt;/i&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;instdir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;program&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;soffice&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;adm-feragatname-gndermek&quot;&gt;5. adım: Feragatname göndermek&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wiki.documentfoundation.org/index.php?title=Development/Developers&amp;amp;oldid=117013&quot;&gt;Feragatname göndermek&lt;/a&gt; için gerekli adımlardan bahsediliyor. Fakat kısaca açıklayacak olursak:&lt;/p&gt;
+
+&lt;p&gt;Kısaca; “ &lt;b&gt;libreoffice@lists.freedesktop.org&lt;/b&gt; “adresine,&lt;/p&gt;
+
+&lt;p&gt;Konu:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;license&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;statement&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;olacak şekilde şu içerik yollanmalıdır:&lt;/p&gt;
+
+&lt;p&gt;”
+ &lt;b&gt;All of my past &amp;amp; future contributions to LibreOffice may be licensed under the MPLv2/LGPLv3+ dual license.&lt;/b&gt;
+“&lt;/p&gt;
+
+&lt;h3 id=&quot;adm-yama-gnderilmesi&quot;&gt;6. adım: Yama gönderilmesi&lt;/h3&gt;
+
+&lt;p&gt;Yamaları  &lt;a href=&quot;https://gerrit.libreoffice.org/#/q/status:open&quot;&gt;gerrit&lt;/a&gt; üzerinden yolluyoruz. Gerrit özgür web tabanlı kod gözden geçirme aracıdır. Gerrit’e yama göndermek için gerekli adımlar &lt;a href=&quot;https://wiki.documentfoundation.org/Development/gerrit&quot;&gt;burada&lt;/a&gt; anlatılmış.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Adımlar:&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logerrit&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setup&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;komutunu çalıştırıyoruz. Daha sonra /home/[username]/.ssh/id_rsa.pub içeriğini ayarlar kısmındaki SSH Public Keys kısmına ekliyoruz.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;[.ssh/ dizininiz yoksa /home/[username]/.ssh olacak şekilde bir .ssh/ dizini oluşturup,      $ ssh-keygen komutuyla oluşturulan anahtarı kaydediyoruz.]&lt;/i&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logerrit&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;komutu sorunsuz çalışıyorsa gerrit aracını kullanabiliriz.&lt;/p&gt;
+
+&lt;p&gt;Daha sonra:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;checkout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;yeni_dal_adi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;commit&lt;/span&gt; 
+ &lt;span class=&quot;nx&quot;&gt;libreoffice$&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logerrit&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;master&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;komutları ile yamanızı gerrite gönderebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;&lt;b&gt;Notlar:&lt;/b&gt;&lt;/i&gt;
+&lt;i&gt;(Değişiklik yaptığınız dizinin bir üst dizinindeyken “ $ git add . “ komutunu kullabilirsiniz.)&lt;/i&gt;
+&lt;i&gt;$ git commit dediğimizde,commit mesajının başına tdf#&lt;bug_id&gt; diyerek bug numarası ile ilişkilendirmelisiniz. Tam yapı:&lt;/bug_id&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;tdf&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bug_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;commit_mesaji&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;i&gt;şeklinde olmalıdır.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Yeni versiyon commit göndermek için gerekli adımlar da &lt;a href=&quot;https://wiki.documentfoundation.org/Development/gerrit/SubmitPatch&quot;&gt;burada&lt;/a&gt; anlatılmış. Kısaca:&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;checkout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dal_adi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;commit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amend&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;libreoffice$&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logerrit&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;master&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;adm-katkc-listesine-isim-ekleme&quot;&gt;7. adım: Katkıcı listesine isim ekleme&lt;/h3&gt;
+
+&lt;p&gt;İlk yamanız kabul edildikten sonra &lt;a href=&quot;https://wiki.documentfoundation.org/index.php?title=Development/Developers&quot;&gt;listeye&lt;/a&gt; isminizi eklemelisiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;[Not: Edit diyerek kendinizi ekleyebilirsiniz. Alfabetik sıraya dikkat ediniz.]&lt;/i&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>

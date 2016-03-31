@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      LibreOffice'e Katkı Vermek &middot; Feyza Yavuz
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Aloha.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+
+   </nav>
+
+  <div class="sidebar-item">
+
+  <div class="header-social">
+    <ul>
+      <li><a href="http://github.com/feyzayavuz" >Github</a></li>
+      <li><a href="https://twitter.com/feyzayavuzz/">Twitter</a></li>
+      <li><a href="https://plus.google.com/103225477691627340488">Google+</a></li>
+    </ul>
+          </div>
+
+
+     <p>
+      &copy; 2016. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Feyza Yavuz</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">LibreOffice'e Katkı Vermek</h1>
+  <span class="post-date">01 Nov 2015</span>
+  <div class="highlighter-rouge"><pre class="highlight"><code>LibreOffice, özgür yazılım destekçisi insanlar tarafından katkı
+verilebilen bir ofis yazılımıdır. 
+</code></pre>
+</div>
+
+<p>LibreOffice’e katkı vermeyi düşünüyorsanız, katkı vermeden önce gerçekleştirilmesi gereken aşamaları ve yama göndermek için gerekli adımları anlatacağım.</p>
+
+<h3 id="adm-gelitirici-listesine-ye-olmak">1. adım: Geliştirici listesine üye olmak</h3>
+
+<p><a href="http://lists.freedesktop.org/mailman/listinfo/libreoffice">Geliştirici listesine</a> bu adresten üye olunmalı.</p>
+
+<h3 id="adm-hata-takip-sistemine-ye-olmak">2. adım: Hata takip sistemine üye olmak</h3>
+
+<p>Libreoffice hata takip sistemi olarak bugzilla kullanılmaktadır. Bugzilla, libreoffice kullanımı sırasında ortaya çıkan hataların kullanıcılar tarafından geliştiricilere bildirilmesini sağlayan web tabanlı bir arayüzdür.</p>
+
+<p><a href="https://bugs.documentfoundation.org/">Hata takip sistemi üyeliği</a> buradan yapılmalı.</p>
+
+<h3 id="adm-kaynak-kodun-indirilmesi">3. adım: Kaynak kodun indirilmesi</h3>
+
+<p><a href="https://bugs.documentfoundation.org/">Belgede</a> bahsedildiği gibi kaynok kod indirilmeli.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span> <span class="nx">git</span> <span class="nx">clone</span> <span class="nx">git</span><span class="err">:</span><span class="c1">//anongit.freedesktop.org/libreoffice/core libreoffice</span></code></pre></figure>
+
+<h3 id="adm-kaynak-kodun-derlenmesi">4. adım: Kaynak kodun derlenmesi</h3>
+
+<p><a href="https://wiki.documentfoundation.org/Development/BuildingOnLinux">Kaynak kodu derlemek</a> için yardımcı olacaktır. (<a href="https://www.youtube.com/watch?v=2gIqOOajdYQ&amp;hd=1">Video</a>)</p>
+
+<p><b>Kısaca adımlar</b></p>
+
+<p><i>Önce depoyu derliyoruz: </i></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
+ <span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">dist</span><span class="o">-</span><span class="nx">upgrade</span></code></pre></figure>
+
+<p><i>Bağımlılıkları kuruyoruz:</i></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">build</span><span class="o">-</span><span class="nx">dep</span> <span class="nx">libreoffice</span></code></pre></figure>
+
+<p><i>LibreOffice deposunu indiriyoruz:</i></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="nx">git</span> <span class="nx">clone</span> <span class="nx">git</span><span class="err">:</span><span class="c1">//anongit.freedesktop.org/libreoffice/core libreoffice</span></code></pre></figure>
+
+<p><i>Dizinde betik dosyasının hatasız çalıştığını görmek için komutu çalıştırıyoruz:</i></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="nx">cd</span> <span class="nx">libreoffice</span>
+ <span class="nx">$</span> <span class="p">.</span><span class="o">/</span><span class="nx">autogen</span><span class="p">.</span><span class="nx">sh</span></code></pre></figure>
+
+<p><i>Derliyoruz:</i></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="nx">make</span> <span class="o">-</span><span class="nx">jN</span> </code></pre></figure>
+
+<p><i>[Not1: N: çekirdek sayısı], [Not2: Derleme işlemi uzun sürüyor]</i></p>
+
+<p><i>Derleme tamamlanınca Libreoffice5’in çalıştığından emin olmak için bu komutu kullanabilirsiniz:</i></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="nx">instdir</span><span class="o">/</span><span class="nx">program</span><span class="o">/</span><span class="nx">soffice</span> </code></pre></figure>
+
+<h3 id="adm-feragatname-gndermek">5. adım: Feragatname göndermek</h3>
+
+<p><a href="https://wiki.documentfoundation.org/index.php?title=Development/Developers&amp;oldid=117013">Feragatname göndermek</a> için gerekli adımlardan bahsediliyor. Fakat kısaca açıklayacak olursak:</p>
+
+<p>Kısaca; “ <b>libreoffice@lists.freedesktop.org</b> “adresine,</p>
+
+<p>Konu:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="o">&lt;</span><span class="nx">your</span> <span class="nx">name</span><span class="o">&gt;</span> <span class="nx">license</span> <span class="nx">statement</span></code></pre></figure>
+
+<p>olacak şekilde şu içerik yollanmalıdır:</p>
+
+<p>”
+ <b>All of my past &amp; future contributions to LibreOffice may be licensed under the MPLv2/LGPLv3+ dual license.</b>
+“</p>
+
+<h3 id="adm-yama-gnderilmesi">6. adım: Yama gönderilmesi</h3>
+
+<p>Yamaları  <a href="https://gerrit.libreoffice.org/#/q/status:open">gerrit</a> üzerinden yolluyoruz. Gerrit özgür web tabanlı kod gözden geçirme aracıdır. Gerrit’e yama göndermek için gerekli adımlar <a href="https://wiki.documentfoundation.org/Development/gerrit">burada</a> anlatılmış.</p>
+
+<p><b>Adımlar:</b></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="p">.</span><span class="o">/</span><span class="nx">logerrit</span> <span class="nx">setup</span> </code></pre></figure>
+
+<p>komutunu çalıştırıyoruz. Daha sonra /home/[username]/.ssh/id_rsa.pub içeriğini ayarlar kısmındaki SSH Public Keys kısmına ekliyoruz.</p>
+
+<p><i>[.ssh/ dizininiz yoksa /home/[username]/.ssh olacak şekilde bir .ssh/ dizini oluşturup,      $ ssh-keygen komutuyla oluşturulan anahtarı kaydediyoruz.]</i></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="p">.</span><span class="o">/</span><span class="nx">logerrit</span> <span class="nx">test</span> </code></pre></figure>
+
+<p>komutu sorunsuz çalışıyorsa gerrit aracını kullanabiliriz.</p>
+
+<p>Daha sonra:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="nx">git</span> <span class="nx">checkout</span> <span class="o">-</span><span class="nx">b</span> <span class="o">&lt;</span><span class="nx">yeni_dal_adi</span><span class="o">&gt;</span>
+ <span class="nx">$</span> <span class="nx">git</span> <span class="nx">add</span> <span class="nx">file</span><span class="p">[</span><span class="nx">file</span><span class="p">]</span>
+ <span class="nx">$</span> <span class="nx">git</span> <span class="nx">commit</span> 
+ <span class="nx">libreoffice$</span> <span class="p">.</span><span class="o">/</span><span class="nx">logerrit</span> <span class="nx">submit</span> <span class="nx">master</span> </code></pre></figure>
+
+<p>komutları ile yamanızı gerrite gönderebilirsiniz.</p>
+
+<p><i><b>Notlar:</b></i>
+<i>(Değişiklik yaptığınız dizinin bir üst dizinindeyken “ $ git add . “ komutunu kullabilirsiniz.)</i>
+<i>$ git commit dediğimizde,commit mesajının başına tdf#<bug_id> diyerek bug numarası ile ilişkilendirmelisiniz. Tam yapı:</bug_id></i></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">tdf</span><span class="err">#</span><span class="o">&lt;</span><span class="nx">bug_id</span><span class="o">&gt;</span>  <span class="o">&lt;</span><span class="nx">commit_mesaji</span><span class="o">&gt;</span></code></pre></figure>
+
+<p><i>şeklinde olmalıdır.</i></p>
+
+<p><b>Yeni versiyon commit göndermek için gerekli adımlar da <a href="https://wiki.documentfoundation.org/Development/gerrit/SubmitPatch">burada</a> anlatılmış. Kısaca:</b></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"> <span class="nx">$</span> <span class="nx">git</span> <span class="nx">checkout</span> <span class="o">-</span><span class="nx">b</span> <span class="o">&lt;</span><span class="nx">dal_adi</span><span class="o">&gt;</span>
+ <span class="nx">$</span> <span class="nx">git</span> <span class="nx">add</span> <span class="p">.</span>
+ <span class="nx">$</span> <span class="nx">git</span> <span class="nx">commit</span> <span class="o">--</span><span class="nx">amend</span>
+ <span class="nx">libreoffice$</span> <span class="p">.</span><span class="o">/</span><span class="nx">logerrit</span> <span class="nx">submit</span> <span class="nx">master</span> </code></pre></figure>
+
+<h3 id="adm-katkc-listesine-isim-ekleme">7. adım: Katkıcı listesine isim ekleme</h3>
+
+<p>İlk yamanız kabul edildikten sonra <a href="https://wiki.documentfoundation.org/index.php?title=Development/Developers">listeye</a> isminizi eklemelisiniz.</p>
+
+<p><i>[Not: Edit diyerek kendinizi ekleyebilirsiniz. Alfabetik sıraya dikkat ediniz.]</i></p>
+
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
