@@ -9,19 +9,23 @@ Libreoffice'te eklenti yöneticisi için herhangi bir buton ya da kısayol bulun
 
 Tools > Extension Manager menüsü için 'Ctrl + Alt + E' kısayolunu ekledim.
 
-<p><img src="http://i.imgur.com/hXfV400.png" /></p>
+
+<p><img src="http://i.imgur.com/hXfV400.png" /></p> 
+
 
 İlgili yama: [https://gerrit.libreoffice.org/#/c/23376/](https://gerrit.libreoffice.org/#/c/23376/)
+<br /><br />
 
+Core'da uğraştığım ve bahsetmek istediğim bir diğer [hata-kaydı](https://bugs.documentfoundation.org/show_bug.cgi?id=92768)
+ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlenebilmesini istiyorlardı. Bununla ilgili Ankara HackFest'te gönderdiğim 2 yama kabul edildi. 
 
-Core'da uğraştığım ve bahsetmek istediğim bir diğer [hata-kaydı](https://bugs.documentfoundation.org/show_bug.cgi?id=92768) ise; Grafik oluşturulduğunda isteğe göre eklenebilen başlık objesinin gizlenebilmesini istiyorlardı. Bununla ilgili Ankara HackFest'te gönderdiğim 2 yama kabul edildi. 
+İlgili yamalar:<br /> 				
+  				1. [https://gerrit.libreoffice.org/#/c/24517/](https://gerrit.libreoffice.org/#/c/24517/) <br />
+  				2. [https://gerrit.libreoffice.org/#/c/24564/](https://gerrit.libreoffice.org/#/c/24564/) 
 
-İlgili yamalar: 
-				[https://gerrit.libreoffice.org/#/c/24517/](https://gerrit.libreoffice.org/#/c/24517/)
-				[https://gerrit.libreoffice.org/#/c/24564/](https://gerrit.libreoffice.org/#/c/24564/)
+<br />
 
-
-Son olarak, kısa bir süredir Libreoffice/online projesine bakıyorum. Arayüze Libreoffice'te de bulunan 'Comment' butonunun eklenmesini istiyorlardı. Butonu ekledim, şöyle;
+Son olarak, kısa bir süredir Libreoffice/online projesine bakıyorum. Arayüze Libreoffice'te de bulunan 'Comment' butonunun eklenmesini istiyorlardı. Butonu ekledim, görsel;
 
 <p><img src="http://i.imgur.com/UnYB4NL.png?1" /></p>
 

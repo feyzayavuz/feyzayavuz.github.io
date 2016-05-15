@@ -4,7 +4,7 @@
  <title>Feyza Yavuz</title>
  <link href="http://feyzayavuz.github.io/atom.xml" rel="self"/>
  <link href="http://feyzayavuz.github.io/"/>
- <updated>2016-03-31T04:20:40+03:00</updated>
+ <updated>2016-05-16T02:50:16+03:00</updated>
  <id>http://feyzayavuz.github.io</id>
  <author>
    <name>Feyza</name>
@@ -13,12 +13,47 @@
 
  
  <entry>
+   <title>Libreoffice Çalışmaları</title>
+   <link href="http://feyzayavuz.github.io/2016/05/15/LibreOffice-%C3%87al%C4%B1%C5%9Fmalar%C4%B1/"/>
+   <updated>2016-05-15T00:00:00+03:00</updated>
+   <id>http://feyzayavuz.github.io/2016/05/15/LibreOffice-Çalışmaları</id>
+   <content type="html">&lt;p&gt;Selamlar,&lt;/p&gt;
+
+&lt;p&gt;Libreoffice’te eklenti yöneticisi için herhangi bir buton ya da kısayol bulunmamaktaydı. Bununla ilgili açılan &lt;a href=&quot;https://bugs.documentfoundation.org/show_bug.cgi?id=58845&quot;&gt;hata-kaydı&lt;/a&gt; ikisinden birini eklemeyi öneriyordu. Toolbar yeterince kalabalık olduğundan ben kısayol eklemeyi tercih ettim.&lt;/p&gt;
+
+&lt;p&gt;Tools &amp;gt; Extension Manager menüsü için ‘Ctrl + Alt + E’ kısayolunu ekledim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/hXfV400.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;İlgili yama: &lt;a href=&quot;https://gerrit.libreoffice.org/#/c/23376/&quot;&gt;https://gerrit.libreoffice.org/#/c/23376/&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Core’da uğraştığım ve bahsetmek istediğim bir diğer &lt;a href=&quot;https://bugs.documentfoundation.org/show_bug.cgi?id=92768&quot;&gt;hata-kaydı&lt;/a&gt;
+ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlenebilmesini istiyorlardı. Bununla ilgili Ankara HackFest’te gönderdiğim 2 yama kabul edildi.&lt;/p&gt;
+
+&lt;p&gt;İlgili yamalar:&lt;br /&gt; 				
+  				1. &lt;a href=&quot;https://gerrit.libreoffice.org/#/c/24517/&quot;&gt;https://gerrit.libreoffice.org/#/c/24517/&lt;/a&gt; &lt;br /&gt;
+  				2. &lt;a href=&quot;https://gerrit.libreoffice.org/#/c/24564/&quot;&gt;https://gerrit.libreoffice.org/#/c/24564/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Son olarak, kısa bir süredir Libreoffice/online projesine bakıyorum. Arayüze Libreoffice’te de bulunan ‘Comment’ butonunun eklenmesini istiyorlardı. Butonu ekledim, görsel;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/UnYB4NL.png?1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;İlgili yama: &lt;a href=&quot;https://gerrit.libreoffice.org/#/c/24696/&quot;&gt;https://gerrit.libreoffice.org/#/c/24696/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hoşçakalın.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>LibreOffice'e Katkı Vermek</title>
    <link href="http://feyzayavuz.github.io/2015/11/01/LibreOffice'e-Katk%C4%B1-Vermek/"/>
    <updated>2015-11-01T00:00:00+03:00</updated>
    <id>http://feyzayavuz.github.io/2015/11/01/LibreOffice'e-Katkı-Vermek</id>
-   <content type="html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LibreOffice, özgür yazılım destekçisi insanlar tarafından katkı
-verilebilen bir ofis yazılımıdır. 
+   <content type="html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LibreOffice, pek çok platformda çalışan ve diğer ofis programlarıyla uyumlu,
+özgür ve ücretsiz bir ofis yazılımıdır.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
