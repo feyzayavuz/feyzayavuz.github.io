@@ -5,6 +5,8 @@ title: Libreoffice Çalışmaları
  
 Selamlar,
 
+Eylülden bu yana bir grup arkadaşımla birlikte Libreoffice üzerine çalışmalar yapıyoruz. Ben şu ana kadar, farkettiğim hataları raporladım ve raporlanmış hata kayıtlarında belirtildiği gibi bir takım sorunları düzeltmeye çalıştım. Hala çalışıyorum. Genel olarak arayüz ağırlıklı işler yaptım. Kısaca bahsedecek olursam;
+
 Libreoffice'te eklenti yöneticisi için herhangi bir buton ya da kısayol bulunmamaktaydı. Bununla ilgili açılan [hata-kaydı](https://bugs.documentfoundation.org/show_bug.cgi?id=58845) ikisinden birini eklemeyi öneriyordu. Toolbar yeterince kalabalık olduğundan ben kısayol eklemeyi tercih ettim.
 
 Tools > Extension Manager menüsü için 'Ctrl + Alt + E' kısayolunu ekledim.

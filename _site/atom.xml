@@ -4,7 +4,7 @@
  <title>Feyza Yavuz</title>
  <link href="http://feyzayavuz.github.io/atom.xml" rel="self"/>
  <link href="http://feyzayavuz.github.io/"/>
- <updated>2016-05-16T02:50:16+03:00</updated>
+ <updated>2016-05-16T03:23:23+03:00</updated>
  <id>http://feyzayavuz.github.io</id>
  <author>
    <name>Feyza</name>
@@ -18,6 +18,8 @@
    <updated>2016-05-15T00:00:00+03:00</updated>
    <id>http://feyzayavuz.github.io/2016/05/15/LibreOffice-Çalışmaları</id>
    <content type="html">&lt;p&gt;Selamlar,&lt;/p&gt;
+
+&lt;p&gt;Eylülden bu yana bir grup arkadaşımla birlikte Libreoffice üzerine çalışmalar yapıyoruz. Ben şu ana kadar, farkettiğim hataları raporladım ve raporlanmış hata kayıtlarında belirtildiği gibi bir takım sorunları düzeltmeye çalıştım. Hala çalışıyorum. Genel olarak arayüz ağırlıklı işler yaptım. Kısaca bahsedecek olursam;&lt;/p&gt;
 
 &lt;p&gt;Libreoffice’te eklenti yöneticisi için herhangi bir buton ya da kısayol bulunmamaktaydı. Bununla ilgili açılan &lt;a href=&quot;https://bugs.documentfoundation.org/show_bug.cgi?id=58845&quot;&gt;hata-kaydı&lt;/a&gt; ikisinden birini eklemeyi öneriyordu. Toolbar yeterince kalabalık olduğundan ben kısayol eklemeyi tercih ettim.&lt;/p&gt;
 
@@ -52,8 +54,7 @@ ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlene
    <link href="http://feyzayavuz.github.io/2015/11/01/LibreOffice'e-Katk%C4%B1-Vermek/"/>
    <updated>2015-11-01T00:00:00+03:00</updated>
    <id>http://feyzayavuz.github.io/2015/11/01/LibreOffice'e-Katkı-Vermek</id>
-   <content type="html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LibreOffice, pek çok platformda çalışan ve diğer ofis programlarıyla uyumlu,
-özgür ve ücretsiz bir ofis yazılımıdır.
+   <content type="html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LibreOffice,pek çok platformda çalışan ve diğer ofis programlarıyla uyumlu, özgür ve ücretsiz bir ofis yazılımıdır.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 

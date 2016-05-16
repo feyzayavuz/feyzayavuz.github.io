@@ -2,8 +2,7 @@
 layout: post
 title: LibreOffice'e Katkı Vermek
 ---
-	LibreOffice, pek çok platformda çalışan ve diğer ofis programlarıyla uyumlu,
-	özgür ve ücretsiz bir ofis yazılımıdır.
+	LibreOffice,pek çok platformda çalışan ve diğer ofis programlarıyla uyumlu, özgür ve ücretsiz bir ofis yazılımıdır.
 
 LibreOffice'e katkı vermeyi düşünüyorsanız, katkı vermeden önce gerçekleştirilmesi gereken aşamaları ve yama göndermek için gerekli adımları anlatacağım.
 
