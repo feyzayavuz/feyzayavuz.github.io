@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      LibreOffice İçin Eklenti Oluşturma &middot; Feyza Yavuz
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-08">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Aloha. <img src="https://cdn4.iconfinder.com/data/icons/ibrandify-basic-essentials-icon-set/512/pen_stroke_sketch_doodle_lineart_206-128.png" /></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/archive/">Archives</a>
+        
+      
+    
+      
+    
+
+   </nav>
+
+  <div class="sidebar-item">
+
+  <div class="header-social">
+    <ul>
+      <li><a href="http://github.com/feyzayavuz" >Github</a></li>
+      <li><a href="https://twitter.com/feyzayavuzz/">Twitter</a></li>
+      <li><a href="https://plus.google.com/103225477691627340488">Google+</a></li>
+    </ul>
+          </div>
+
+
+     <p>
+      &copy; 2016. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Feyza Yavuz</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">LibreOffice İçin Eklenti Oluşturma</h1>
+  <span class="post-date">20 Jul 2016</span>
+  <p>Selamlar,</p>
+
+<p>LibreOffice çeşitli özelliklere sahip bir ofis yazılımıdır ancak ek özelliklere ihtiyacınız olabilir. Bunun için eklentileri kullanabilirsiniz.</p>
+
+<p>Eklentiler, eklenebilen/kaldırılabilen ana programdan bağımsız araçlardır. Standart LibreOffice bileşenlerine yeni işlevler ekleyebilir ya da mevcut işlevselliği kolaylaştırabilir.</p>
+
+<p><a href="http://extensions.libreoffice.org/">Eklenti Marketinden</a> indirip deneyebilirsiniz.</p>
+
+<p><strong>**<em>LibreOffice eklenti yapısının nasıl olduğundan yazmış olduğum küçük bir örnek yardımıyla bahsedeceğim.</em></strong></p>
+
+<p><strong><em>.oxt</em></strong> formatındaki sıkıştırılmış dosyayı açtığımızda tam yapı şu şekildedir:</p>
+
+<p><img src="http://i.imgur.com/7EupNvR.png" /></p>
+
+<p>Klasörde bulunan tüm dizin ve dosyaların eklenti içerisinde bir görevi var.</p>
+
+<h2 id="dosyalar"><strong><em>Dosyalar:</em></strong></h2>
+
+<p><strong>Addons.xcu</strong> -&gt; Eklentiyi çalıştırdığınızda arayüzde görüntülenecek değişiklikleri barındırır.</p>
+
+<p><strong>build</strong> -&gt; Eklentide bir değişiklik yaptığınızda bu betiği çalıştırarak yeni bir “eklentiadi.oxt” dosyası oluşturabilirsiniz.</p>
+
+<p><strong>description.xml</strong> -&gt; Eklenti yöneticide görüntülenen eklentinin simgesi,adı, açıklaması gibi özelliklerinin (description dizini içerisinde bulunan dosyaların) dosya yolları bulunur.</p>
+
+<p><strong>extensionname.txt</strong> -&gt; İçerisinde eklenti adı bulunur “eklentiadi.oxt” şeklinde.</p>
+
+<p><strong>Hello.py</strong> -&gt; Eklentinin yapacağı iş bu dosyada tanımlanır.</p>
+
+<h2 id="dizinler"><strong><em>Dizinler:</em></strong></h2>
+
+<p><strong>description</strong> -&gt; İçerisindeki license.txt dosyası lisans metnini oluşturur, description.txt dosyasının içeriği ise eklenti yöneticiye uzantıyı ekledikten sonra eklentinin açıklaması olarak görünmektedir.</p>
+
+<p><strong>images</strong> -&gt; Eklentinin simgesi bu dosya içerisinde bulunur.</p>
+
+<p><strong>META-INF</strong> -&gt; manifest.xml dosyası bulundurur bu dosya içinde paketin içindeki tüm dosyaların bir listesi, paketteki her dosyanın media tipi bilgileri bulunur.</p>
+
+<p>Eklenti yöneticiden eklentiyi kurmak için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- Add
+- .oxt uzantılı dosyayı seç
+- Lisans sözleşmesini kabul et
+- LibreOffice'i yeniden başlat.
+</code></pre>
+</div>
+
+<p><img src="http://i.imgur.com/eH8tUTV.png" /></p>
+
+<p><em>Bu eklenti araç çubuğuna bir buton ekliyor ve butona tıkladığınız “Hello World!” çıktısı veriyor.</em></p>
+
+<p><img src="http://i.imgur.com/kxE62I9.png" /></p>
+
+<p>Eklentiyi <a href="https://github.com/feyzayavuz/HelloWorld">github’a</a> koydum. Eklentinin nasıl yazıldığını anlamak için temel bir örnek.</p>
+
+<p>Not: Bozuk bir eklentiyi çalıştırınca, kaldırmak istediğimizde sorunla karşılaşıyoruz.</p>
+
+<p><img src="http://i.imgur.com/h6ZuCJv.png" /></p>
+
+<p>Bu bozuk eklentileri eklenti yöneticiden kaldırmak için:</p>
+
+<p><b> /home/user/.config/libreoffice/4/user/uno_packages/cache/uno_packages/ </b> içerisinde hangi eklentiyi kaldırmak istiyorsak onun .tmp_ uzantılı dizinini siliyoruz.</p>
+
+<p>Geliştirici sürümünde aynı sorunla karşılaştığınızda ise:</p>
+
+<p><b> libreoffice/instdir/user/uno_packages/cache/uno_packages/ </b> içinde bulunan ilgili .tmp_ uzantılı dizini siliyoruz.</p>
+
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2016/05/15/LibreOffice-%C3%87al%C4%B1%C5%9Fmalar%C4%B1/">
+            Libreoffice Çalışmaları
+            <small>15 May 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/11/01/LibreOffice'e-Katk%C4%B1-Vermek/">
+            LibreOffice'e Katkı Vermek
+            <small>01 Nov 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

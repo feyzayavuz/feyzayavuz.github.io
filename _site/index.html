@@ -109,6 +109,83 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="//2016/07/20/LibreOffice-%C4%B0%C3%A7in-Eklenti-Olusturma/">
+        LibreOffice İçin Eklenti Oluşturma
+      </a>
+    </h1>
+
+    <span class="post-date">20 Jul 2016</span>
+
+    <p>Selamlar,</p>
+
+<p>LibreOffice çeşitli özelliklere sahip bir ofis yazılımıdır ancak ek özelliklere ihtiyacınız olabilir. Bunun için eklentileri kullanabilirsiniz.</p>
+
+<p>Eklentiler, eklenebilen/kaldırılabilen ana programdan bağımsız araçlardır. Standart LibreOffice bileşenlerine yeni işlevler ekleyebilir ya da mevcut işlevselliği kolaylaştırabilir.</p>
+
+<p><a href="http://extensions.libreoffice.org/">Eklenti Marketinden</a> indirip deneyebilirsiniz.</p>
+
+<p><strong>**<em>LibreOffice eklenti yapısının nasıl olduğundan yazmış olduğum küçük bir örnek yardımıyla bahsedeceğim.</em></strong></p>
+
+<p><strong><em>.oxt</em></strong> formatındaki sıkıştırılmış dosyayı açtığımızda tam yapı şu şekildedir:</p>
+
+<p><img src="http://i.imgur.com/7EupNvR.png" /></p>
+
+<p>Klasörde bulunan tüm dizin ve dosyaların eklenti içerisinde bir görevi var.</p>
+
+<h2 id="dosyalar"><strong><em>Dosyalar:</em></strong></h2>
+
+<p><strong>Addons.xcu</strong> -&gt; Eklentiyi çalıştırdığınızda arayüzde görüntülenecek değişiklikleri barındırır.</p>
+
+<p><strong>build</strong> -&gt; Eklentide bir değişiklik yaptığınızda bu betiği çalıştırarak yeni bir “eklentiadi.oxt” dosyası oluşturabilirsiniz.</p>
+
+<p><strong>description.xml</strong> -&gt; Eklenti yöneticide görüntülenen eklentinin simgesi,adı, açıklaması gibi özelliklerinin (description dizini içerisinde bulunan dosyaların) dosya yolları bulunur.</p>
+
+<p><strong>extensionname.txt</strong> -&gt; İçerisinde eklenti adı bulunur “eklentiadi.oxt” şeklinde.</p>
+
+<p><strong>Hello.py</strong> -&gt; Eklentinin yapacağı iş bu dosyada tanımlanır.</p>
+
+<h2 id="dizinler"><strong><em>Dizinler:</em></strong></h2>
+
+<p><strong>description</strong> -&gt; İçerisindeki license.txt dosyası lisans metnini oluşturur, description.txt dosyasının içeriği ise eklenti yöneticiye uzantıyı ekledikten sonra eklentinin açıklaması olarak görünmektedir.</p>
+
+<p><strong>images</strong> -&gt; Eklentinin simgesi bu dosya içerisinde bulunur.</p>
+
+<p><strong>META-INF</strong> -&gt; manifest.xml dosyası bulundurur bu dosya içinde paketin içindeki tüm dosyaların bir listesi, paketteki her dosyanın media tipi bilgileri bulunur.</p>
+
+<p>Eklenti yöneticiden eklentiyi kurmak için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- Add
+- .oxt uzantılı dosyayı seç
+- Lisans sözleşmesini kabul et
+- LibreOffice'i yeniden başlat.
+</code></pre>
+</div>
+
+<p><img src="http://i.imgur.com/eH8tUTV.png" /></p>
+
+<p><em>Bu eklenti araç çubuğuna bir buton ekliyor ve butona tıkladığınız “Hello World!” çıktısı veriyor.</em></p>
+
+<p><img src="http://i.imgur.com/kxE62I9.png" /></p>
+
+<p>Eklentiyi <a href="https://github.com/feyzayavuz/HelloWorld">github’a</a> koydum. Eklentinin nasıl yazıldığını anlamak için temel bir örnek.</p>
+
+<p>Not: Bozuk bir eklentiyi çalıştırınca, kaldırmak istediğimizde sorunla karşılaşıyoruz.</p>
+
+<p><img src="http://i.imgur.com/h6ZuCJv.png" /></p>
+
+<p>Bu bozuk eklentileri eklenti yöneticiden kaldırmak için:</p>
+
+<p><b> /home/user/.config/libreoffice/4/user/uno_packages/cache/uno_packages/ </b> içerisinde hangi eklentiyi kaldırmak istiyorsak onun .tmp_ uzantılı dizinini siliyoruz.</p>
+
+<p>Geliştirici sürümünde aynı sorunla karşılaştığınızda ise:</p>
+
+<p><b> libreoffice/instdir/user/uno_packages/cache/uno_packages/ </b> içinde bulunan ilgili .tmp_ uzantılı dizini siliyoruz.</p>
+
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="//2016/05/15/LibreOffice-%C3%87al%C4%B1%C5%9Fmalar%C4%B1/">
         Libreoffice Çalışmaları
       </a>
@@ -129,7 +206,7 @@
 <p>İlgili yama: <a href="https://gerrit.libreoffice.org/#/c/23376/">https://gerrit.libreoffice.org/#/c/23376/</a>
 <br /><br /></p>
 
-<p>Core’da uğraştığım ve bahsetmek istediğim bir diğer <a href="https://bugs.documentfoundation.org/show_bug.cgi?id=92768">hata-kaydı</a>
+<p>Bunun dışında core’da uğraştığım ve bahsetmek istediğim bir diğer <a href="https://bugs.documentfoundation.org/show_bug.cgi?id=92768">hata-kaydı</a>
 ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlenebilmesini istiyorlardı. Bununla ilgili Ankara HackFest’te gönderdiğim 2 yama kabul edildi.</p>
 
 <p>İlgili yamalar:<br /> 				

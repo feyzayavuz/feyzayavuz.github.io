@@ -11,7 +11,7 @@
 
   <title>
     
-      Libreoffice Çalışmaları &middot; Feyza Yavuz
+      LibreOffice İçin Eklenti Oluşturma &middot; Feyza Yavuz
     
   </title>
 
@@ -106,37 +106,61 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Libreoffice Çalışmaları</h1>
-  <span class="post-date">15 May 2016</span>
+  <h1 class="post-title">LibreOffice İçin Eklenti Oluşturma</h1>
+  <span class="post-date">20 Jul 2016</span>
   <p>Selamlar,</p>
 
-<p>Eylülden bu yana bir grup arkadaşımla birlikte Libreoffice üzerine çalışmalar yapıyoruz. Ben şu ana kadar, farkettiğim hataları raporladım ve raporlanmış hata kayıtlarında belirtildiği gibi bir takım sorunları düzeltmeye çalıştım. Hala çalışıyorum. Genel olarak arayüz ağırlıklı işler yaptım. Kısaca bahsedecek olursam;</p>
+<p>LibreOffice çeşitli özelliklere sahip bir ofis yazılımıdır ancak ek özelliklere ihtiyacınız olabilir. Bunun için eklentileri kullanabilirsiniz.</p>
 
-<p>Libreoffice’te eklenti yöneticisi için herhangi bir buton ya da kısayol bulunmamaktaydı. Bununla ilgili açılan <a href="https://bugs.documentfoundation.org/show_bug.cgi?id=58845">hata-kaydı</a> ikisinden birini eklemeyi öneriyordu. Toolbar yeterince kalabalık olduğundan ben kısayol eklemeyi tercih ettim.</p>
+<p>Eklentiler, eklenebilen/kaldırılabilen ana programdan bağımsız araçlardır. Standart LibreOffice bileşenlerine yeni işlevler ekleyebilir ya da mevcut işlevselliği kolaylaştırabilir.</p>
 
-<p>Tools &gt; Extension Manager menüsü için ‘Ctrl + Alt + E’ kısayolunu ekledim.</p>
+<p><a href="http://extensions.libreoffice.org/">Eklenti Marketinden</a> indirip deneyebilirsiniz.</p>
 
-<p><img src="http://i.imgur.com/hXfV400.png" /></p>
+<p><strong>**<em>LibreOffice eklentilerinin yapısının nasıl olduğundan yazmış olduğum küçük bir örnek yardımıyla bahsedeceğim.</em></strong></p>
 
-<p>İlgili yama: <a href="https://gerrit.libreoffice.org/#/c/23376/">https://gerrit.libreoffice.org/#/c/23376/</a>
-<br /><br /></p>
+<p><strong><em>.oxt</em></strong> formatındaki sıkıştırılmış dosyayı açtığımızda tam yapı şu şekildedir:</p>
 
-<p>Bunun dışında core’da uğraştığım ve bahsetmek istediğim bir diğer <a href="https://bugs.documentfoundation.org/show_bug.cgi?id=92768">hata-kaydı</a>
-ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlenebilmesini istiyorlardı. Bununla ilgili Ankara HackFest’te gönderdiğim 2 yama kabul edildi.</p>
+<p><img src="http://i.imgur.com/7EupNvR.png" /></p>
 
-<p>İlgili yamalar:<br /> 				
-  				1. <a href="https://gerrit.libreoffice.org/#/c/24517/">https://gerrit.libreoffice.org/#/c/24517/</a> <br />
-  				2. <a href="https://gerrit.libreoffice.org/#/c/24564/">https://gerrit.libreoffice.org/#/c/24564/</a></p>
+<p>Klasörde bulunan tüm dizin ve dosyaların eklenti içerisinde bir görevi var.</p>
 
-<p><br /></p>
+<h2 id="dosyalar"><strong><em>Dosyalar:</em></strong></h2>
 
-<p>Son olarak, kısa bir süredir Libreoffice/online projesine bakıyorum. Arayüze Libreoffice’te de bulunan ‘Comment’ butonunun eklenmesini istiyorlardı. Butonu ekledim, görsel;</p>
+<p><strong>Addons.xcu</strong> -&gt; Eklentiyi çalıştırdığınızda arayüzde görüntülenecek değişiklikleri barındırır.</p>
 
-<p><img src="http://i.imgur.com/UnYB4NL.png?1" /></p>
+<p><strong>build</strong> -&gt; Eklentide bir değişiklik yaptığınızda bu betiği çalıştırarak yeni bir “eklentiadi.oxt” dosyası oluşturabilirsiniz.</p>
 
-<p>İlgili yama: <a href="https://gerrit.libreoffice.org/#/c/24696/">https://gerrit.libreoffice.org/#/c/24696/</a></p>
+<p><strong>description.xml</strong> -&gt; Eklenti yöneticide görüntülenen eklentinin simgesi,adı, açıklaması gibi özelliklerinin (description dizini içerisinde bulunan dosyaların) dosya yolları bulunur.</p>
 
-<p>Hoşçakalın.</p>
+<p><strong>extensionname.txt</strong> -&gt; İçerisinde eklenti adı bulunur “eklentiadi.oxt” şeklinde.</p>
+
+<p><strong>Hello.py</strong> -&gt; Eklentinin yapacağı iş bu dosyada tanımlanır.</p>
+
+<h2 id="dizinler"><strong><em>Dizinler:</em></strong></h2>
+
+<p><strong>description</strong> -&gt; İçerisindeki license.txt dosyası lisans metnini oluşturur, description.txt dosyasının içeriği ise eklenti yöneticiye uzantıyı ekledikten sonra eklentinin açıklaması olarak görünmektedir.</p>
+
+<p><strong>images</strong> -&gt; Eklentinin simgesi bu dosya içerisinde bulunur.</p>
+
+<p><strong>META-INF</strong> -&gt; manifest.xml dosyası bulundurur bu dosya içinde paketin içindeki tüm dosyaların bir listesi, paketteki her dosyanın media tipi bilgileri bulunur.</p>
+
+<p>Eklenti yöneticide;
+	- Add
+ 	- .oxt uzantılı dosyayı seç.
+ 	- Lisans sözleşmesini kabul et.
+ 	- LibreOffice’i yeniden başlat.
+ diyerek çalıştırıyoruz. Yazdığım eklenti; HelloWorld.oxt</p>
+
+<p><img src="http://i.imgur.com/eH8tUTV.png" /></p>
+
+<p><em>Bu eklenti araç çubuğuna bir buton ekliyor ve butona tıkladığınız “Hello World!” çıktısı veriyor.</em></p>
+
+<p><img src="http://i.imgur.com/kxE62I9.png" /></p>
+
+<p>Eklentiyi <a href="">github’a</a> koydum. Eklentinin nasıl yazıldığını anlamak için temel bir örnek, eklentinin bir “hello world” versiyonu.</p>
+
+<p>Not: Bozuk eklentileri eklenti yönetici ile çalıştır</p>
+
 
 </div>
 
@@ -146,9 +170,9 @@ ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlene
     
       <li>
         <h3>
-          <a href="/2016/07/20/LibreOffice-%C4%B0%C3%A7in-Eklenti-Olusturma/">
-            LibreOffice İçin Eklenti Oluşturma
-            <small>20 Jul 2016</small>
+          <a href="/2016/05/15/LibreOffice-%C3%87al%C4%B1%C5%9Fmalar%C4%B1/">
+            Libreoffice Çalışmaları
+            <small>15 May 2016</small>
           </a>
         </h3>
       </li>

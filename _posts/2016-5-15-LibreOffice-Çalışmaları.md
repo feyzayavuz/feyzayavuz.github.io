@@ -18,7 +18,7 @@ Tools > Extension Manager menüsü için 'Ctrl + Alt + E' kısayolunu ekledim.
 İlgili yama: [https://gerrit.libreoffice.org/#/c/23376/](https://gerrit.libreoffice.org/#/c/23376/)
 <br /><br />
 
-Core'da uğraştığım ve bahsetmek istediğim bir diğer [hata-kaydı](https://bugs.documentfoundation.org/show_bug.cgi?id=92768)
+Bunun dışında core'da uğraştığım ve bahsetmek istediğim bir diğer [hata-kaydı](https://bugs.documentfoundation.org/show_bug.cgi?id=92768)
 ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlenebilmesini istiyorlardı. Bununla ilgili Ankara HackFest'te gönderdiğim 2 yama kabul edildi. 
 
 İlgili yamalar:<br /> 				

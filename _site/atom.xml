@@ -4,13 +4,86 @@
  <title>Feyza Yavuz</title>
  <link href="http://feyzayavuz.github.io/atom.xml" rel="self"/>
  <link href="http://feyzayavuz.github.io/"/>
- <updated>2016-05-16T03:23:23+03:00</updated>
+ <updated>2016-07-21T11:58:14+03:00</updated>
  <id>http://feyzayavuz.github.io</id>
  <author>
    <name>Feyza</name>
    <email>feyzaayavuz@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>LibreOffice İçin Eklenti Oluşturma</title>
+   <link href="http://feyzayavuz.github.io/2016/07/20/LibreOffice-%C4%B0%C3%A7in-Eklenti-Olusturma/"/>
+   <updated>2016-07-20T00:00:00+03:00</updated>
+   <id>http://feyzayavuz.github.io/2016/07/20/LibreOffice-İçin-Eklenti-Olusturma</id>
+   <content type="html">&lt;p&gt;Selamlar,&lt;/p&gt;
+
+&lt;p&gt;LibreOffice çeşitli özelliklere sahip bir ofis yazılımıdır ancak ek özelliklere ihtiyacınız olabilir. Bunun için eklentileri kullanabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Eklentiler, eklenebilen/kaldırılabilen ana programdan bağımsız araçlardır. Standart LibreOffice bileşenlerine yeni işlevler ekleyebilir ya da mevcut işlevselliği kolaylaştırabilir.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://extensions.libreoffice.org/&quot;&gt;Eklenti Marketinden&lt;/a&gt; indirip deneyebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;**&lt;em&gt;LibreOffice eklenti yapısının nasıl olduğundan yazmış olduğum küçük bir örnek yardımıyla bahsedeceğim.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;.oxt&lt;/em&gt;&lt;/strong&gt; formatındaki sıkıştırılmış dosyayı açtığımızda tam yapı şu şekildedir:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EupNvR.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Klasörde bulunan tüm dizin ve dosyaların eklenti içerisinde bir görevi var.&lt;/p&gt;
+
+&lt;h2 id=&quot;dosyalar&quot;&gt;&lt;strong&gt;&lt;em&gt;Dosyalar:&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Addons.xcu&lt;/strong&gt; -&amp;gt; Eklentiyi çalıştırdığınızda arayüzde görüntülenecek değişiklikleri barındırır.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;build&lt;/strong&gt; -&amp;gt; Eklentide bir değişiklik yaptığınızda bu betiği çalıştırarak yeni bir “eklentiadi.oxt” dosyası oluşturabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;description.xml&lt;/strong&gt; -&amp;gt; Eklenti yöneticide görüntülenen eklentinin simgesi,adı, açıklaması gibi özelliklerinin (description dizini içerisinde bulunan dosyaların) dosya yolları bulunur.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;extensionname.txt&lt;/strong&gt; -&amp;gt; İçerisinde eklenti adı bulunur “eklentiadi.oxt” şeklinde.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hello.py&lt;/strong&gt; -&amp;gt; Eklentinin yapacağı iş bu dosyada tanımlanır.&lt;/p&gt;
+
+&lt;h2 id=&quot;dizinler&quot;&gt;&lt;strong&gt;&lt;em&gt;Dizinler:&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;description&lt;/strong&gt; -&amp;gt; İçerisindeki license.txt dosyası lisans metnini oluşturur, description.txt dosyasının içeriği ise eklenti yöneticiye uzantıyı ekledikten sonra eklentinin açıklaması olarak görünmektedir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;images&lt;/strong&gt; -&amp;gt; Eklentinin simgesi bu dosya içerisinde bulunur.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;META-INF&lt;/strong&gt; -&amp;gt; manifest.xml dosyası bulundurur bu dosya içinde paketin içindeki tüm dosyaların bir listesi, paketteki her dosyanın media tipi bilgileri bulunur.&lt;/p&gt;
+
+&lt;p&gt;Eklenti yöneticiden eklentiyi kurmak için;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Add
+- .oxt uzantılı dosyayı seç
+- Lisans sözleşmesini kabul et
+- LibreOffice&#39;i yeniden başlat.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eH8tUTV.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Bu eklenti araç çubuğuna bir buton ekliyor ve butona tıkladığınız “Hello World!” çıktısı veriyor.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/kxE62I9.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Eklentiyi &lt;a href=&quot;https://github.com/feyzayavuz/HelloWorld&quot;&gt;github’a&lt;/a&gt; koydum. Eklentinin nasıl yazıldığını anlamak için temel bir örnek.&lt;/p&gt;
+
+&lt;p&gt;Not: Bozuk bir eklentiyi çalıştırınca, kaldırmak istediğimizde sorunla karşılaşıyoruz.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/h6ZuCJv.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu bozuk eklentileri eklenti yöneticiden kaldırmak için:&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt; /home/user/.config/libreoffice/4/user/uno_packages/cache/uno_packages/ &lt;/b&gt; içerisinde hangi eklentiyi kaldırmak istiyorsak onun .tmp_ uzantılı dizinini siliyoruz.&lt;/p&gt;
+
+&lt;p&gt;Geliştirici sürümünde aynı sorunla karşılaştığınızda ise:&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt; libreoffice/instdir/user/uno_packages/cache/uno_packages/ &lt;/b&gt; içinde bulunan ilgili .tmp_ uzantılı dizini siliyoruz.&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Libreoffice Çalışmaları</title>
@@ -30,7 +103,7 @@
 &lt;p&gt;İlgili yama: &lt;a href=&quot;https://gerrit.libreoffice.org/#/c/23376/&quot;&gt;https://gerrit.libreoffice.org/#/c/23376/&lt;/a&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Core’da uğraştığım ve bahsetmek istediğim bir diğer &lt;a href=&quot;https://bugs.documentfoundation.org/show_bug.cgi?id=92768&quot;&gt;hata-kaydı&lt;/a&gt;
+&lt;p&gt;Bunun dışında core’da uğraştığım ve bahsetmek istediğim bir diğer &lt;a href=&quot;https://bugs.documentfoundation.org/show_bug.cgi?id=92768&quot;&gt;hata-kaydı&lt;/a&gt;
 ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlenebilmesini istiyorlardı. Bununla ilgili Ankara HackFest’te gönderdiğim 2 yama kabul edildi.&lt;/p&gt;
 
 &lt;p&gt;İlgili yamalar:&lt;br /&gt; 				
