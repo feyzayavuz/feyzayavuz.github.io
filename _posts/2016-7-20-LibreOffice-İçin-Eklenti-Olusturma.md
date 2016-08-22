@@ -15,7 +15,7 @@ Eklentiler, eklenebilen/kaldırılabilen ana programdan bağımsız araçlardır
 
 ***.oxt*** formatındaki sıkıştırılmış dosyayı açtığımızda tam yapı şu şekildedir:
 
-<p><img src="http://i.imgur.com/7EupNvR.png" /></p>
+<p><img src="http://feyzayavuz.github.io/assets/by1-1.png" /></p>
 
 Klasörde bulunan tüm dizin ve dosyaların eklenti içerisinde bir görevi var.  
 
