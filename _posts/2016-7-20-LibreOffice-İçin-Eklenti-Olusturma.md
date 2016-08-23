@@ -51,18 +51,18 @@ Eklenti yöneticiden eklentiyi kurmak için;
 
 
 
-<p><img src="http://i.imgur.com/eH8tUTV.png" /></p>
+<p><img src="http://feyzayavuz.github.io/assets/by1-2.png" /></p>
 
 *Bu eklenti araç çubuğuna bir buton ekliyor ve butona tıkladığınız "Hello World!" çıktısı veriyor.*
 
-<p><img src="http://i.imgur.com/kxE62I9.png" /></p>
+<p><img src="http://feyzayavuz.github.io/assets/by1-3.png" /></p>
 
 Eklentiyi [github'a](https://github.com/feyzayavuz/HelloWorld) koydum. Eklentinin nasıl yazıldığını anlamak için temel bir örnek.
 
 
 Not: Bozuk bir eklentiyi çalıştırınca, kaldırmak istediğimizde sorunla karşılaşıyoruz.
 
-<p><img src="http://i.imgur.com/h6ZuCJv.png" /></p>
+<p><img src="http://feyzayavuz.github.io/assets/by1-4.png" /></p>
 
 Bu bozuk eklentileri eklenti yöneticiden kaldırmak için:
 

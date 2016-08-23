@@ -12,7 +12,7 @@ Libreoffice'te eklenti yöneticisi için herhangi bir buton ya da kısayol bulun
 Tools > Extension Manager menüsü için 'Ctrl + Alt + E' kısayolunu ekledim.
 
 
-<p><img src="http://i.imgur.com/hXfV400.png" /></p> 
+<p><img src="http://feyzayavuz.github.io/assets/by2-1.png" /></p>
 
 
 İlgili yama: [https://gerrit.libreoffice.org/#/c/23376/](https://gerrit.libreoffice.org/#/c/23376/)
@@ -29,7 +29,7 @@ ise; Grafik oluşturulduğunda isteğe göre eklenen başlık bilgisinin gizlene
 
 Son olarak, kısa bir süredir Libreoffice/online projesine bakıyorum. Arayüze Libreoffice'te de bulunan 'Comment' butonunun eklenmesini istiyorlardı. Butonu ekledim, görsel;
 
-<p><img src="http://i.imgur.com/UnYB4NL.png?1" /></p>
+<p><img src="http://feyzayavuz.github.io/assets/by2-2.png" /></p>
 
 İlgili yama: [https://gerrit.libreoffice.org/#/c/24696/](https://gerrit.libreoffice.org/#/c/24696/)
 
