@@ -93,7 +93,7 @@ Yamaları  [gerrit](https://gerrit.libreoffice.org/#/q/status:open) üzerinden y
 
 komutunu çalıştırıyoruz. Daha sonra /home/[username]/.ssh/id_rsa.pub içeriğini ayarlar kısmındaki SSH Public Keys kısmına ekliyoruz.
 
-<i>[.ssh/ dizininiz yoksa /home/[username]/.ssh olacak şekilde bir .ssh/ dizini oluşturup,      $ ssh-keygen komutuyla oluşturulan anahtarı kaydediyoruz.]</i>
+<i>[Daha önce oluşturulmamış ise; "$ ssh-keygen " komutuyla anahtarımızı oluşturuyoruz.]</i>
 
 {% highlight js %}
  $ ./logerrit test 
